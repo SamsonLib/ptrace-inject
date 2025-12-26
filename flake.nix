@@ -29,7 +29,8 @@
 
           installPhase = ''
             runHook preInstall
-            install -Dm755 target/release/ptrace-inject $out/bin/ptrace-inject
+            install -Dm755 target/x86_64-unknown-linux-gnu/release/ptrace-inject \
+              $out/bin/ptrace-inject
             runHook postInstall
           '';
 
