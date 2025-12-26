@@ -27,12 +27,12 @@
           # nativeBuildInputs = [ pkgs.pkg-config ];
           # buildInputs = [ pkgs.openssl ];
 
-          installPhase = ''
-            runHook preInstall
-            install -Dm755 target/x86_64-unknown-linux-gnu/release/ptrace-inject \
-              $out/bin/ptrace-inject
-            runHook postInstall
-          '';
+           installPhase = ''
+             runHook preInstall
+             install -Dm755 target/x86_64-unknown-linux-gnu/release/ptrace-inject \
+               $out/bin/ptrace-inject
+             runHook postInstall
+           '';
 
           meta.mainProgram = "ptrace-inject";
         };
